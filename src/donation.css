@@ -1,0 +1,234 @@
+.donate-page {
+  --primary: #1d4ed8;
+  --primary-dark: #1e3a8a;
+  --primary-light: #1d4ed8;
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-900: #0f172a;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 10px 24px rgba(15, 23, 42, 0.08);
+  padding: 3rem 0 5rem;
+  background: var(--neutral-50);
+}
+
+.donate-container {
+  max-width: 640px;
+}
+
+.donate-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.donate-badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.donate-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 0.5rem;
+}
+
+.donate-header p {
+  color: var(--neutral-600);
+}
+
+.donate-form {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-200);
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.section-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 1rem;
+}
+
+/* Amount Grid */
+.amount-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.amount-card {
+  width: 100%;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font: inherit;
+  color: var(--neutral-900);
+  background: white;
+}
+
+.amount-card:hover {
+  border-color: var(--primary-light);
+  background: var(--neutral-50);
+}
+
+.amount-card.active {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+.amount-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.amount-impact {
+  font-size: 0.75rem;
+  color: var(--neutral-500);
+  line-height: 1.3;
+}
+
+.amount-card.active .amount-impact {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.custom-card {
+  padding: 0.5rem;
+}
+
+.custom-card input {
+  width: 100%;
+  border: 1px solid var(--neutral-300);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+/* Frequency Toggle */
+.frequency-toggle {
+  display: flex;
+  background: var(--neutral-100);
+  border-radius: var(--radius-md);
+  padding: 0.25rem;
+}
+
+.frequency-toggle button {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: var(--neutral-600);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+}
+
+.frequency-toggle button.active {
+  background: white;
+  color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Inputs */
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--neutral-700);
+  margin-bottom: 0.375rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(43, 110, 79, 0.1);
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .input-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .amount-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .custom-card {
+    grid-column: span 4;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .custom-card input {
+    margin-top: 0;
+    max-width: 200px;
+  }
+}
+
+.security-note {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--neutral-500);
+  margin-top: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
