@@ -38,7 +38,7 @@ jobs:
       - name: Check lint
         run: npm run lint
 
-      - name: Build site
+      - name: Build project
         run: npm run build
         env:
           VITE_WEB3FORMS_ACCESS_KEY: ${{ secrets.VITE_WEB3FORMS_ACCESS_KEY }}
