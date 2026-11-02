@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import './HeroSlideshow.css';
 
 const slides = [
-  '/images/child.png',
-  '/images/pot.png',
-  '/images/helping-hand.png',
+  `${import.meta.env.BASE_URL}images/child.png`,
+  `${import.meta.env.BASE_URL}images/helping-hand.png`,
+  `${import.meta.env.BASE_URL}images/pot.png`,
 ];
 
 export default function HeroSlideshow() {

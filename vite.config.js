@@ -10,7 +10,7 @@ const base =
     ? `/${repositoryName}/`
     : '/'
 
-// https://vite.dev/config/
+// https://vite.dev/config/ '/hfh/',
 export default defineConfig({
   base,
   plugins: [react()],
